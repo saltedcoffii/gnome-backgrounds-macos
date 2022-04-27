@@ -9,7 +9,7 @@ For more information about GNOME Backgrounds, see the upstream repository at htt
 Dependencies: `meson`, `ninja` (or `samurai` linked to `ninja`), `curl`, and `bash`
 
 Building from the source is easy! Due to copyright limitations, MacOS wallpapers are not contained in this repository and are downloaded from a third party source during build.
-A script is provided to perform this download. 
+A script is provided to perform this download.
 ```
 ./download-backgrounds.sh
 meson setup build
@@ -17,6 +17,12 @@ ninja -C build
 DESTDIR='/' ninja -C build install
 ```
 Be sure to elevate privileges to UID 0 if need be.
+
+## Additional Resources
+
+To further MacOS-ize your GNOME desktop, consider adding a MacOS-like GTK them and icon theme.
+https://github.com/vinceliuice/WhiteSur-gtk-theme/
+https://github.com/vinceliuice/WhiteSur-icon-theme/
 
 ## License
 
