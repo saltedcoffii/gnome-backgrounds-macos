@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 declare -A downloads=(
@@ -18,4 +18,3 @@ declare -A downloads=(
 for url in "${!downloads[@]}"; do
   curl -L "${url}" -o $(dirname $0)/backgrounds/"${downloads[${url}]}";
 done
-
