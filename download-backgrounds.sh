@@ -16,6 +16,6 @@ declare -A downloads=(
 )
 
 for url in "${!downloads[@]}"; do
-  curl -L "${url}" -o backgrounds/"${downloads[${url}]}";
+  curl -L "${url}" -o $(dirname $0)/backgrounds/"${downloads[${url}]}";
 done
 
