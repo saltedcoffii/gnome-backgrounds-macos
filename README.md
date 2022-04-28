@@ -24,7 +24,7 @@ $ yay -S gnome-backgrounds-macos
 You may also install manually using [makepkg](https://wiki.archlinux.org/title/Makepkg) to build from the AUR directly (not recommended).
 
 ```
-# pacman -S --needed base-devel
+# pacman -S --needed git base-devel
 $ git clone https://aur.archlinux.org/gnome-backgrounds-macos.git --depth 1
 $ cd gnome-backgrounds-macos
 $ makepkg -si
@@ -45,7 +45,7 @@ To build an installable apk, first [setup your Alpine system to build APKs](http
 Then, download and extract the [latest release](https://github.com/saltedcoffii/gnome-backgrounds-macos/releases/) of the project and extract it.
 
 ```
-$ curl -L <latest-release-tarball>.tar.gz
+$ curl -LO <latest-release-tarball>.tar.gz
 $ tar xf <latest-release-tarball>.tar.gz
 $ cd gnome-backgrounds-macos-<version>
 ```
