@@ -6,6 +6,11 @@ For more information about GNOME Backgrounds, see the upstream repository at htt
 
 ## Installing on various Linux distributions
 
+Note that for all of these distros, the `gnome-shell` must be version 42.0 or above.
+```
+$ gnome-shell --version
+```
+
 ### Arch Linux, Manjaro Linux and derivatives
 
 [gnome-backgrounds-macos](https://aur.archlinux.org/packages/gnome-backgrounds-macos/) is available in the AUR. The VCS version is [also available](https://aur.archlinux.org/packages/gnome-backgrounds-macos-git/).
@@ -30,6 +35,36 @@ Manjaro users: You can install using [pamac (aka Add/Remove Software)](https://w
 ```
 $ pamac build gnome-backgrounds-macos
 ```
+
+### Alpine Linux and derivatives
+
+Installing gnome-backgrounds-macos on [Alpine Linux](https://alpinelinux.org/) may be a bit trickier than other distros. I cannot provide an APK, because the APK would contain backgrounds under copyright. I may choose to provide an APK that downloads the images as a post-install hook, however that is not currently the case. Pull requests welcome!
+
+To build an installable apk, first [setup your Alpine system to build APKs](https://wiki.alpinelinux.org/wiki/Include:Setup_your_system_and_account_for_building_packages)
+
+Then, download and extract the [latest release](https://github.com/saltedcoffii/gnome-backgrounds-macos/releases/) of the project and extract it.
+
+```
+$ curl -L <latest-release-tarball>.tar.gz
+$ tar xf <latest-release-tarball>.tar.gz
+$ cd gnome-backgrounds-macos-<version>
+```
+
+or clone the source directly for the most recent (and possibly less stable) source
+
+```
+$ git clone https://github.com/saltedcoffii/gnome-backgrounds-macos.git --depth 1
+$ cd gnome-backgrounds-macos
+```
+
+Then, build and install the APK!
+
+```
+$ abuild -r
+# apk add ${HOME}/packages/$(whoami)/$(uname -r)/gnome-backgrounds-macos*.apk
+```
+
+You can delete the source and build directories now if you aren't planning on doing any more APK building, you don't need them.
 
 ### Other Linux distributions
 
