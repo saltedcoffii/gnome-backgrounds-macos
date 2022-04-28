@@ -50,7 +50,7 @@ $ tar xf <latest-release-tarball>.tar.gz
 $ cd gnome-backgrounds-macos-<version>
 ```
 
-or clone the source directly for the most recent (and possibly less stable) source
+or clone the source directly for the most recent (and possibly less stable) source.
 
 ```
 $ git clone https://github.com/saltedcoffii/gnome-backgrounds-macos.git --depth 1
@@ -68,12 +68,16 @@ You can delete the source and build directories now if you aren't planning on do
 
 ### Other Linux distributions
 
-This package should theoretically work on any Linux distribution with GNOME installed. If you'd like support added for your distribution, please open a [new issue](https://github.com/saltedcoffii/gnome-backgrounds-macos/issues/), after ensuring that nobody else has already requested that distro. If you are a maintainer for a distribution, please don't hesitate to add this package!
+This package should theoretically work on any Linux distribution with GNOME installed. If you'd like support added for your distribution, please open a [new issue](https://github.com/saltedcoffii/gnome-backgrounds-macos/issues/), after ensuring that nobody else has already requested that distro. If you are a maintainer for a distribution, please don't hesitate to add this package! Alternatively, build and install from the source directly (see below).
+
+## Usage
+
+After installation, open up the GNOME settings application (aka `gnome-control-center`) and navigate to the Appearance tab. The backgrounds should appear, along with the default GNOME backgrounds, assuming they are installed.
 
 ## Building from source
 
 Dependencies:
-  - `meson` (v 0.50.0 or above)
+  - `meson` (v0.50.0 or above)
   - `ninja` (or `samurai` linked to `ninja`)
   - `curl`
   - `bash`
@@ -86,10 +90,13 @@ $ meson setup build
 $ ninja -C build
 ```
 
-Install without a package manager after building from source (not recommended)
+Install without a package manager after building from source (not recommended).
+
 ```
 # DESTDIR='/' ninja -C build install
 ```
+
+I hope to soon provide support for installing on a per-user basis.
 
 ## Additional Resources and Information
 
