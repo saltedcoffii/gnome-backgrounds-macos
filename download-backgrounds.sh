@@ -19,3 +19,7 @@ declare -A downloads=(
 for url in "${!downloads[@]}"; do
   curl -L "${url}" -o "$(dirname "$0")"/backgrounds/"${downloads[${url}]}";
 done
+
+pushd backgrounds
+  sha256sum -c images.sha256
+popd
