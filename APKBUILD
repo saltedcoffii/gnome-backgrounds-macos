@@ -2,7 +2,7 @@
 # Maintainer: Cassandra Watergate <cassandrawatergate@outlook.com>
 
 pkgname=gnome-backgrounds-macos
-pkgver=42.0
+pkgver=42.0.2
 pkgrel=0
 pkgdesc="Background images for the GNOME desktop from MacOS"
 url="https://github.com/saltedcoffii/gnome-backgrounds-macos"
