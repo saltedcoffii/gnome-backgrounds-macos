@@ -116,4 +116,7 @@ GNOME Backgrounds MacOS uses [semantic versioning](https://semver.org/) with a c
 
 ## License and Legal
 
-See [COPYING.md](https://github.com/saltedcoffii/blob/master/COPYING.md) for details.
+See [COPYING.md](https://github.com/saltedcoffii/gnome-backgrounds-macos/blob/master/COPYING.md) for details.
+
+<a rel="license-software" href="https://www.gnu.org/licenses/gpl-3.0.en.html"><img alt="GNU General Public License" style="border-width:0" src="https://www.gnu.org/graphics/gplv3-127x51.png" height="31" />
+<a rel="license-media" href="https://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
