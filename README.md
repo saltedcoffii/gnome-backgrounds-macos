@@ -27,10 +27,10 @@ You may also install manually using [makepkg](https://wiki.archlinux.org/title/M
 # pacman -S --needed git base-devel
 $ git clone https://aur.archlinux.org/gnome-backgrounds-macos.git --depth 1
 $ cd gnome-backgrounds-macos
-$ makepkg -si
+$ makepkg --asdeps -si
 ```
 
-Manjaro users: You can install using [pamac (aka Add/Remove Software)](https://wiki.manjaro.org/index.php?title=Pamac)
+Manjaro users: You can install using [pamac (aka Add/Remove Software)](https://wiki.manjaro.org/index.php?title=Pamac).
 
 ```
 $ pamac build gnome-backgrounds-macos
@@ -38,9 +38,9 @@ $ pamac build gnome-backgrounds-macos
 
 ### Alpine Linux and derivatives
 
-Installing gnome-backgrounds-macos on [Alpine Linux](https://alpinelinux.org/) may be a bit trickier than other distros. I cannot provide an APK, because the APK would contain backgrounds under copyright. I may choose to provide an APK that downloads the images as a post-install hook, however that is not currently the case. Pull requests welcome!
+Installing gnome-backgrounds-macos on [Alpine Linux](https://alpinelinux.org/) may be a bit trickier than other distros. I cannot provide an APK, because the APK would contain backgrounds under copyright. I may choose to provide an APK that downloads the images as a post-install hook, however that is not currently the case. [Pull requests](https://github.com/saltedcoffii/gnome-backgrounds-macos/pulls/) welcome!
 
-To build an installable apk, first [setup your Alpine system to build APKs](https://wiki.alpinelinux.org/wiki/Include:Setup_your_system_and_account_for_building_packages)
+To build an installable apk, first [setup your Alpine system to build APKs](https://wiki.alpinelinux.org/wiki/Include:Setup_your_system_and_account_for_building_packages).
 
 Then, download and extract the [latest release](https://github.com/saltedcoffii/gnome-backgrounds-macos/releases/) of the project and extract it.
 
@@ -50,16 +50,12 @@ $ tar xf <latest-release-tarball>.tar.gz
 $ cd gnome-backgrounds-macos-<version>
 ```
 
-or clone the source directly for the most recent (and possibly less stable) source.
-
-```
-$ git clone https://github.com/saltedcoffii/gnome-backgrounds-macos.git --depth 1
-$ cd gnome-backgrounds-macos
-```
+It is not possible to build a VCS version of the package for Alpine Linux due to the way APKBUILD files work.
 
 Then, build and install the APK!
 
 ```
+$ abuild checksum
 $ abuild -r
 # apk add ${HOME}/packages/$(whoami)/$(uname -r)/gnome-backgrounds-macos*.apk
 ```
