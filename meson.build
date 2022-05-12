@@ -1,5 +1,5 @@
 project('gnome-backgrounds-macos',
-  version: '42.0',
+  version: '42.0.2',
   meson_version: '>= 0.50.0'
 )
 
