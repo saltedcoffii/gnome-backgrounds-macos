@@ -45,7 +45,7 @@ To build an installable apk, first [setup your Alpine system to build APKs](http
 Then, download and extract the [latest release](https://github.com/saltedcoffii/gnome-backgrounds-macos/releases/) of the project and extract it.
 
 ```
-$ curl -LO <latest-release-tarball>.tar.gz
+$ wget <latest-release-tarball>.tar.gz
 $ tar xf <latest-release-tarball>.tar.gz
 $ cd gnome-backgrounds-macos-<version>
 ```
