@@ -27,7 +27,8 @@ You may also install manually using [makepkg](https://wiki.archlinux.org/title/M
 # pacman -S --needed git base-devel
 $ git clone https://aur.archlinux.org/gnome-backgrounds-macos.git --depth 1
 $ cd gnome-backgrounds-macos
-$ makepkg --asdeps -si
+$ makepkg -s --asdeps
+# pacman -U gnome-backgrounds-macos-*-any.pkg.tar.zst
 ```
 
 Manjaro users: You can install using [pamac (aka Add/Remove Software)](https://wiki.manjaro.org/index.php?title=Pamac).
