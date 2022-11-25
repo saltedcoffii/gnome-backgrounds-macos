@@ -6,7 +6,7 @@ abort () {
 }
 
 # Get the getopts_long function
-source build/getopts_long/lib/getopts_long.bash || \
+source "$(dirname "${0}")"/build/getopts_long/lib/getopts_long.bash || \
   abort -e "\e[1;31mCould not find \e[1;33mbuild/getopts_long/lib/getopts_long.bash\e[1;31m. Did you forget to intiate submodules?\e[0m"
 
 # Help output
