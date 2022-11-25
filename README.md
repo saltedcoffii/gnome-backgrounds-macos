@@ -6,7 +6,7 @@ For more information about GNOME Backgrounds, see the upstream repository at htt
 
 ## Installing on various Linux distributions
 
-Note that for all of these distros, the `gnome-shell` must be version 42.0 or above.
+Note that for all of these distros, the `gnome-shell` must be version 43.0 or above. If you need versions for 42.0, see older tags.
 ```
 $ gnome-shell --version
 ```
