@@ -37,32 +37,6 @@ Manjaro users: You can install using [pamac (aka Add/Remove Software)](https://w
 $ pamac build gnome-backgrounds-macos
 ```
 
-### Alpine Linux and derivatives
-
-Installing gnome-backgrounds-macos on [Alpine Linux](https://alpinelinux.org/) may be a bit trickier than other distros. I cannot provide an APK, because the APK would contain backgrounds under copyright. I may choose to provide an APK that downloads the images as a post-install hook, however that is not currently the case. [Pull requests](https://github.com/saltedcoffii/gnome-backgrounds-macos/pulls/) welcome!
-
-To build an installable apk, first [setup your Alpine system to build APKs](https://wiki.alpinelinux.org/wiki/Include:Setup_your_system_and_account_for_building_packages).
-
-Then, download and extract the [latest release](https://github.com/saltedcoffii/gnome-backgrounds-macos/releases/) of the project and extract it.
-
-```
-$ wget <latest-release-tarball>.tar.gz
-$ tar xf <latest-release-tarball>.tar.gz
-$ cd gnome-backgrounds-macos-<version>
-```
-
-It is not possible to build a VCS version of the package for Alpine Linux due to the way APKBUILD files work.
-
-Then, build and install the APK!
-
-```
-$ abuild checksum
-$ abuild -r
-# apk add ${HOME}/packages/$(whoami)/$(uname -r)/gnome-backgrounds-macos*.apk
-```
-
-You can delete the source and build directories now if you aren't planning on doing any more APK building, you don't need them.
-
 ### Other Linux distributions
 
 This package should theoretically work on any Linux distribution with GNOME installed. If you'd like support added for your distribution, please open a [new issue](https://github.com/saltedcoffii/gnome-backgrounds-macos/issues/), after ensuring that nobody else has already requested that distro. If you are a maintainer for a distribution, please don't hesitate to add this package! Alternatively, build and install from the source directly (see below).

@@ -1,0 +1,3 @@
+[submodule "build/getopts_long"]
+	path = build/getopts_long
+	url = https://github.com/UrsaDK/getopts_long
