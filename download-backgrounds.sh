@@ -136,7 +136,3 @@ for url in "${!downloads[@]}"; do
   fi
   do_dl "${url}" "${filename}"
 done
-
-cd "$(dirname "${0}")"/backgrounds
-  sha256sum -c images.sha256
-cd ..
